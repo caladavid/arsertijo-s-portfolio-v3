@@ -23,14 +23,14 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-/*   const handleLinkClick = (path) => {
+  const handleLinkClick = (path) => {
     if (!isHomePage) {
       // Si no estás en la página principal, aplica un retraso antes de redirigir
       setTimeout(() => {
         window.location.href = path;
       }, 1620); 
     }
-  }; */
+  };
 
   return (
     <header className="overflow-hidden">
@@ -73,22 +73,22 @@ const Header = () => {
         <ul className={`${isHomePage ? `bg-white ` : `bg-black text-white` } hidden md:flex px-4 py-5 gap-4 rounded-full`}>
           <li className="my-auto"><Link className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" href="/works">Works</Link></li>
           <li className="my-auto">
-            <Link 
-              className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
+            <a 
               href="/#about"
+              className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
 /*               onClick={() => handleLinkClick("/#about")} */
             >
               About me
-            </Link>
+            </a>
           </li>
           <li className="my-auto">
-            <Link 
-              className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
+            <a 
               href="/#contact"
+              className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
 /*               onClick={() => handleLinkClick("/#contact")} */
             >
               Contact
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>

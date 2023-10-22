@@ -12,7 +12,7 @@ import PageTransitionLayout from '@/components/PageTransitionLayout';
 const Page = () => {
   const params = useParams();
   const workId = params.workId;
-  const workName = workId
+  const workName = workId.replace("_"," ");
   const [clickedImg, setClickedImg] = useState(null); 
   const [currentIndexImage, setCurrentIndexImage] = useState(null);
   const projectsToRender = worksList.filter((list) => list.name === workName);

@@ -17,7 +17,7 @@ const ProjectCard = ({name, href, index, setModal}) => {
       variants={textMask}
       initial={isHomePage ? 'initial' : 'visible'}
       animate={isInView && isHomePage ? 'open' : 'visible'}
-      >
+    >
       <Link href={`/works/${href}`}
             className='block py-5 md:py-10 border-slate-950 border-b-[1px] imgCursor'
             onMouseEnter={() => {setModal({active: true, index: index})}}

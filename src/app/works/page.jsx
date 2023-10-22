@@ -18,12 +18,12 @@ const Works = () => {
     {
       name: "Streams Overlays",
       href:"stream_overlays",
-      src: "StreamOverlays.jpg",
+      src: "Stream_overlays.jpg",
     },
     {
       name: "Album Covers",
       href:"album_covers",
-      src: "AlbumCovers.jpg",
+      src: "Album_covers.jpg",
     },
     {
       name: "Websites",

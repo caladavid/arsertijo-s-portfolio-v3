@@ -91,7 +91,7 @@ const worksList = [
     //Album Covers
     {
         name: 'album covers',
-        image: "/assets/works/Cover Music/eighty-three.jpg",
+        image: "/assets/works/CoverMusic/eighty-three.jpg",
         desc: 'Eighty-three',
     },
 

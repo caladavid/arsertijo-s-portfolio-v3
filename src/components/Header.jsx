@@ -23,14 +23,14 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLinkClick = (path) => {
+/*   const handleLinkClick = (path) => {
     if (!isHomePage) {
       // Si no estás en la página principal, aplica un retraso antes de redirigir
       setTimeout(() => {
         window.location.href = path;
       }, 1620); 
     }
-  };
+  }; */
 
   return (
     <header className="overflow-hidden">
@@ -76,7 +76,7 @@ const Header = () => {
             <Link 
               className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
               href="/#about"
-              onClick={() => handleLinkClick("/#about")}
+/*               onClick={() => handleLinkClick("/#about")} */
             >
               About me
             </Link>
@@ -85,7 +85,7 @@ const Header = () => {
             <Link 
               className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
               href="/#contact"
-              onClick={() => handleLinkClick("/#contact")}
+/*               onClick={() => handleLinkClick("/#contact")} */
             >
               Contact
             </Link>

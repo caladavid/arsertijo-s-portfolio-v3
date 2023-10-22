@@ -22,12 +22,12 @@ const RecentProjects = () => {
     {
       name: "Streams Overlays",
       href:"stream_overlays",
-      src: "Stream overlays.jpg"
+      src: "Stream_overlays.jpg"
     },
     {
       name: "Album Covers",
       href:"album_covers",
-      src: "Album covers.jpg"
+      src: "Album_covers.jpg"
     },
     {
       name: "Websites",

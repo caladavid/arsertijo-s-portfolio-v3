@@ -54,17 +54,17 @@ const worksList = [
     },
     {
         name: 'stream overlays',
-        image: "/assets/works/StreamsOverlays/2.jpg",
+        image: "/assets/works/Streams_overlays/2.jpg",
         desc: 'stream pack',
     },
     {
         name: 'stream overlays',
-        image: "/assets/works/StreamsOverlays/3.jpg",
+        image: "/assets/works/Streams Overlays/3.jpg",
         desc: 'stream pack',
     },
     {
         name: 'stream overlays',
-        image: "/assets/works/StreamsOverlays/4.jpg",
+        image: "/assets/works/Streams_Overlays/4.jpg",
         desc: 'stream pack',
     },
     {

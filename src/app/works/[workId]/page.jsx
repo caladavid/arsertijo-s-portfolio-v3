@@ -22,8 +22,6 @@ const Page = () => {
     setClickedImg(list.image);
   };
 
-  console.log(worksList)
-
   // next btn
   const handleNextImage = () => {
     const filteredList = worksList.filter((list) => list.name === workName);
@@ -68,7 +66,6 @@ const Page = () => {
                 {
                   projectsToRender.map((list, index) => (
                     <div key={index}>
-                      {console.log(list.name, list.image)}
                       {list.name === "websites" ? (
                         <Link href={`/works/websites/${list.desc}`}>
                           <Image

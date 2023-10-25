@@ -16,7 +16,7 @@ const Works = () => {
       src: "Thumbnails.jpg",
     },
     {
-      name: "Streams Overlays",
+      name: "Stream Overlays",
       href:"stream_overlays",
       src: "Stream_overlays.jpg",
     },

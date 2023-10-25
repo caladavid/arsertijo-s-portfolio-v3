@@ -49,42 +49,42 @@ const worksList = [
      //Stream Overlays
      { 
         name: 'stream overlays',
-        image: "/assets/works/Streams overlays/1.jpg",
+        image: "/assets/works/StreamOverlays/1.jpg",
         desc: 'stream pack',
     },
     {
         name: 'stream overlays',
-        image: "/assets/works/Streams_overlays/2.jpg",
+        image: "/assets/works/StreamOverlays/2.jpg",
         desc: 'stream pack',
     },
     {
         name: 'stream overlays',
-        image: "/assets/works/Streams Overlays/3.jpg",
+        image: "/assets/works/StreamOverlays/3.jpg",
         desc: 'stream pack',
     },
     {
         name: 'stream overlays',
-        image: "/assets/works/Streams_Overlays/4.jpg",
+        image: "/assets/works/StreamOverlays/4.jpg",
         desc: 'stream pack',
     },
     {
         name: 'stream overlays',
-        image: "/assets/works/StreamsOverlays/5.jpg",
+        image: "/assets/works/StreamOverlays/5.jpg",
         desc: 'stream pack',
     },
     {
         name: 'stream overlays',
-        image: "/assets/works/StreamsOverlays/6.jpg",
+        image: "/assets/works/StreamOverlays/6.jpg",
         desc: 'stream pack',
     },
     {
         name: 'stream overlays',
-        image: "/assets/works/StreamsOverlays/7.jpg",
+        image: "/assets/works/StreamOverlays/7.jpg",
         desc: 'stream pack',
     },
     {
         name: 'stream overlays',
-        image: "/assets/works/StreamsOverlays/8.jpg",
+        image: "/assets/works/StreamOverlays/8.jpg",
         desc: 'stream pack',
     },
 

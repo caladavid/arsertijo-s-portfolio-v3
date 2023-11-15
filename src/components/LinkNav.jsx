@@ -9,7 +9,7 @@ const LinkNav = ({data, isActive, setSelectedIndicator, onClick}) => {
   const router = useRouter();
   const { title, href, index } = data;
 
-  const handleLinkClick = (e) => {
+/*   const handleLinkClick = (e) => {
     e.preventDefault(); 
 
     if (!isHomePage ) {
@@ -25,7 +25,7 @@ const LinkNav = ({data, isActive, setSelectedIndicator, onClick}) => {
     setSelectedIndicator(href);
     onClick(); // Cerrar el menú desplegable Nav
   };
-
+ */
 
   return (
     <motion.div 

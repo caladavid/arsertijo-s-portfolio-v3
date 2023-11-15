@@ -25,7 +25,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLinkClick = (e, path) => {
+/*   const handleLinkClick = (e, path) => {
     e.preventDefault();
 
     if (!isHomePage) {
@@ -37,7 +37,7 @@ const Header = () => {
     } else {
       window.location.href = path;
     }
-  };
+  }; */
   
 
   return (
@@ -84,7 +84,7 @@ const Header = () => {
             <a 
               href="/#about"
               className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
-              onClick={(e) => handleLinkClick(e, '/#about')}
+/*               onClick={(e) => handleLinkClick(e, '/#about')} */
             >
               About me
             </a>
@@ -93,7 +93,7 @@ const Header = () => {
             <a 
               href="/#contact"
               className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
-              onClick={(e) => handleLinkClick(e, '/#contact')}
+/*               onClick={(e) => handleLinkClick(e, '/#contact')} */
             >
               Contact
             </a>

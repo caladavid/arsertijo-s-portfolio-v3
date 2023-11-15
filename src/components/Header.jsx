@@ -6,8 +6,10 @@ import Nav from "./Nav";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const router = useRouter();
   const pathName = usePathname();
   const isHomePage = pathName === "/";
   const [isActive, setIsActive] = useState(false);
@@ -23,14 +25,20 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLinkClick = (path) => {
+  const handleLinkClick = (e, path) => {
+    e.preventDefault();
+
     if (!isHomePage) {
-      // Si no estás en la página principal, aplica un retraso antes de redirigir
+      router.push('/');
+
       setTimeout(() => {
-        window.location.href = path;
-      }, 1620); 
+        router.push(path); // redirige a la sección específica
+      }, 1665);
+    } else {
+      window.location.href = path;
     }
   };
+  
 
   return (
     <header className="overflow-hidden">
@@ -76,7 +84,7 @@ const Header = () => {
             <a 
               href="/#about"
               className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
-/*               onClick={() => handleLinkClick("/#about")} */
+              onClick={(e) => handleLinkClick(e, '/#about')}
             >
               About me
             </a>
@@ -85,7 +93,7 @@ const Header = () => {
             <a 
               href="/#contact"
               className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
-/*               onClick={() => handleLinkClick("/#contact")} */
+              onClick={(e) => handleLinkClick(e, '/#contact')}
             >
               Contact
             </a>

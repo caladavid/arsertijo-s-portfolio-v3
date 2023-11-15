@@ -1,24 +1,26 @@
 import { motion } from 'framer-motion';
-/* import Link from 'next/link' */
-import React, { useState } from 'react'
 import { scale, slide } from '../app/animation/Animation';
-/* import { usePathname } from 'next/navigation'; */
+import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 const LinkNav = ({data, isActive, setSelectedIndicator, onClick}) => {
-/*   const pathName = usePathname(); */
+  const pathName = usePathname();
+  const isHomePage = pathName === "/";
+  const router = useRouter();
   const { title, href, index } = data;
-/*   const [redirect, setRedirect] = useState(false); */
 
-  const handleLinkClick = () => {
-/*     if (pathName !== "/" && (href === "/#contact" || href === "/#about")) {
-      e.preventDefault(); 
+  const handleLinkClick = (e) => {
+    e.preventDefault(); 
 
-      // Redirige primero a la página de inicio ("/") después de un retraso
-      setRedirect(true);
+    if (!isHomePage ) {
+      router.push('/');
+
       setTimeout(() => {
-        window.location.href = href;
-      }, 1620); 
-    } */
+        router.push(href); // redirige a la sección específica
+      }, 1715);
+    } else {
+      window.location.href = href;
+    };
 
     setSelectedIndicator(href);
     onClick(); // Cerrar el menú desplegable Nav
@@ -41,8 +43,7 @@ const LinkNav = ({data, isActive, setSelectedIndicator, onClick}) => {
         animate={isActive ? "open" : "closed"}
         >
       </motion.div>
-      <a className='hover:text-gray imgCursor textCursor ' href={href}>{title}</a>
-{/*       <a className='hover:text-gray imgCursor textCursor ' href={redirect ? '/' : href}>{title}</a> */}
+      <a className='hover:text-gray imgCursor textCursor' href={href}>{title}</a>
     </motion.div>
   )
 }

@@ -29,10 +29,12 @@ const Header = () => {
     e.preventDefault();
 
     if (!isHomePage) {
-      router.push('/');
+/*       router.push('/'); */
+        window.location.href = '/'
 
       setTimeout(() => {
         router.push(path); // redirige a la sección específica
+        window.location.href = path;
       }, 1665);
     } else {
       window.location.href = path;

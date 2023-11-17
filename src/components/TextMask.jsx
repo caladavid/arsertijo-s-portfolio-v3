@@ -30,7 +30,7 @@ const TextMask = ({ phrases, elementType, customClass }) => {
     <ElementT ref={refTextMask}>
       {showTextMask &&
         phrases.map((phrase, index) => {
-          return <span key={index} className={`overflow-hidden inline-block mr-2 md:mr-4 ${customClass}`}>
+          return <span key={index} className={` overflow-hidden inline-block mr-2 md:mr-4 ${customClass}`}>
             <motion.span
               custom={index}
               variants={textMask}

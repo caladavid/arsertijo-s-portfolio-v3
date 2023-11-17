@@ -24,22 +24,7 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-/*   const handleLinkClick = (e, path) => {
-    e.preventDefault();
-
-    if (!isHomePage) {
-      router.push('/');
-
-      setTimeout(() => {
-        router.push(path); // redirige a la sección específica
-      }, 1665);
-    } else {
-      window.location.href = path;
-    }
-  }; */
   
-
   return (
     <header className="overflow-hidden">
       <nav className="w-11/12 xl:w-4/5 mx-auto px-5 py-5 md:px-10 absolute left-5 sm:left-10 right-10 top-10 flex justify-between items-center z-[1] ">
@@ -84,16 +69,14 @@ const Header = () => {
             <a 
               href="/#about"
               className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
-/*               onClick={(e) => handleLinkClick(e, '/#about')} */
             >
               About me
             </a>
           </li>
           <li className="my-auto">
             <a 
-              href="/#contact"
+              href='mailto:angeluniempleo@hotmail.com'
               className="hover:bg-blueArs hover:text-white py-3 px-4 hover:rounded-full transitionModalText" 
-/*               onClick={(e) => handleLinkClick(e, '/#contact')} */
             >
               Contact
             </a>

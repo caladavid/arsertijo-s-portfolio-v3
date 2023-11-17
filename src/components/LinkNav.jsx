@@ -1,31 +1,14 @@
 import { motion } from 'framer-motion';
 import { scale, slide } from '../app/animation/Animation';
-import { useRouter } from 'next/navigation';
-import { usePathname } from 'next/navigation';
 
 const LinkNav = ({data, isActive, setSelectedIndicator, onClick}) => {
-  const pathName = usePathname();
-  const isHomePage = pathName === "/";
-  const router = useRouter();
   const { title, href, index } = data;
 
-/*   const handleLinkClick = (e) => {
-    e.preventDefault(); 
-
-    if (!isHomePage ) {
-      router.push('/');
-
-      setTimeout(() => {
-        router.push(href); // redirige a la sección específica
-      }, 1715);
-    } else {
-      window.location.href = href;
-    };
-
+  const handleLinkClick = () => {
     setSelectedIndicator(href);
     onClick(); // Cerrar el menú desplegable Nav
   };
- */
+
 
   return (
     <motion.div 

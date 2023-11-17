@@ -1,7 +1,11 @@
 export const textMask = {
+    initial: { y: 100},
+    open: (i) => ({ y: 0, transition: { duration: 0.4, delay: 0.1 * i, ease: [0.33, 1, 0.68, 1] } })
+};
+/* export const textMask = {
     initial: { y: "100%" },
     open: (i) => ({ y: "0%", transition: { duration: 0.4, delay: 0.1 * i, ease: [0.33, 1, 0.68, 1] } })
-};
+}; */
 
 export const menuSlide = {
     initial: { x: "calc(100% + 100px)" },

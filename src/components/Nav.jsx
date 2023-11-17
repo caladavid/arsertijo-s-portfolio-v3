@@ -20,7 +20,7 @@ const navItems = [
     },
     {
         title: "Contact",
-        href: "/#contact",
+        href: "mailto:angeluniempleo@hotmail.com",
     },
 ];
 

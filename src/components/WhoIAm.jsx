@@ -10,9 +10,11 @@ const WhoIAm = () => {
         <Wrapper>
             <div>
                 <div className="break-words font-bold text-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl my-10 md:my-20">
-                    <TextMask phrases={title} elementType="h2" className="pb-4"/> 
+                    <TextMask phrases={title} elementType="h2" customClass="pb-4"/> 
                 </div>
-                <div className="lg:text-3xl mt-8 lg:leading-loose text-xl w-full"><TextMask phrases={pPhrases} elementType="p"/></div>
+                <div className="lg:text-3xl mt-8 lg:leading-loose text-xl w-full">
+                    <TextMask phrases={pPhrases} elementType="p"/>
+                </div>
             </div>
         </Wrapper>
     </div>

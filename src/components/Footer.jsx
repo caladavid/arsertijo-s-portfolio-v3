@@ -9,9 +9,9 @@ const Footer = () => {
   const isHomePage = pathName === "/";
 
   return (
-    <div id='contact' className={`${isHomePage ? ` bg-black text-white` : " bg-{#f2f2f2}"} pt-4 md:pt-10 lg:pt-20`}>
+    <div  className={`${isHomePage ? ` bg-black text-white` : " bg-{#f2f2f2}"} pt-4 md:pt-10 lg:pt-20`}>
       <Wrapper>
-        <div className='w-full min-[750px]:grid grid-cols-2 min-[1120px]:grid-cols-3 text-base py-14 border-t-[1px] border-gray items-center'>
+        <div id='contact' className='w-full min-[750px]:grid grid-cols-2 min-[1120px]:grid-cols-3 text-base py-14 border-t-[1px] border-gray items-center'>
             <div className='flex justify-center min-[750px]:justify-start break-words'>
               <p>&copy; {currentYear} Arsertijo. All Rights Reserved.</p> 
             </div>

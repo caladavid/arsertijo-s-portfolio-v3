@@ -166,6 +166,16 @@ const worksList = [
     //Advertisements
     {
         name: 'advertisements',
+        image: "/assets/works/advertisements/5.jpg",
+        desc: 'Torneo The Last Blade satho 1',
+    },
+    {
+        name: 'advertisements',
+        image: "/assets/works/advertisements/4.png",
+        desc: 'Street fighter region free satho 2',
+    },
+    {
+        name: 'advertisements',
         image: "/assets/works/advertisements/3.jpg",
         desc: 'Ars my airs',
     },

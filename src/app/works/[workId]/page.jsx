@@ -12,10 +12,20 @@ import PageTransitionLayout from '@/components/PageTransitionLayout';
 const Page = () => {
   const params = useParams();
   const workId = params.workId;
-  const workName = workId.replace("_"," ");
-  const [clickedImg, setClickedImg] = useState(null); 
+  const workName = workId.replace("_", " ");
+  const [clickedImg, setClickedImg] = useState(null);
   const [currentIndexImage, setCurrentIndexImage] = useState(null);
   const projectsToRender = worksList.filter((list) => list.name === workName);
+  // Get unique categories
+  const categories = [...new Set(worksList.map((work) => work.name))];
+
+  // Get current category index
+  const currentIndex = categories.indexOf(workName);
+  console.log(currentIndex)
+
+  // Calculate next and previous categories
+  const prevCategory = categories[(currentIndex - 1 + categories.length) % categories.length];
+  const nextCategory = categories[(currentIndex + 1) % categories.length];
 
   const handleClick = (list, index) => {
     setCurrentIndexImage(index);
@@ -53,60 +63,62 @@ const Page = () => {
   }, []);
 
   return (
-      <div className='h-full overflow-hidden'>
-          <Wrapper>
-              <div className='flex justify-center md:justify-start pt-36 pb-16 md:pt-40 md:pb-20'>
-                  <h1 className='break-words uppercase text-center font-bold text-4xl md:text-4xl lg:text-6xl 2xl:text-7xl my-10 md:my-0 md:mt-20'>{workName}</h1>
-              </div>
-              <div className="text-center md:text-end pb-16 md:pb-20">
-                <Link className='bg-blueArs text-white px-8 py-4 rounded-full' href="/works">All works</Link>
-              </div>
+    <div className='h-full overflow-hidden'>
+      <Wrapper>
+        <div className='flex justify-center md:justify-start pt-36 pb-16 md:pt-40 md:pb-20'>
+          <h1 className='break-words uppercase text-center font-bold text-4xl md:text-4xl lg:text-6xl 2xl:text-7xl my-10 md:my-0 md:mt-20'>{workName}</h1>
+        </div>
+        <div className="flex justify-end gap-4 text-center md:text-end pb-16 md:pb-20">
+          <Link className='outline outline-2 outline-blueArs hover:bg-blueArs text-blueArs hover:text-white px-8 py-4 rounded-full' href={`/works/${prevCategory.replace(" ", "_")}`}>Previous</Link>
+          <Link className='bg-blueArs text-white px-8 py-4 rounded-full' href="/works">All works</Link>
+          <Link className='outline outline-2 outline-blueArs hover:bg-blueArs text-blueArs hover:text-white px-8 py-4 rounded-full' href={`/works/${nextCategory.replace(" ", "_")}`}>Next</Link>
+        </div>
 
-              <div className='grid grid-cols-1 md:grid-cols-2 mx-auto my-8 mb-20 gap-4'>
-                {
-                  projectsToRender.map((list, index) => (
-                    <div key={index}>
-                      {list.name === "websites" ? (
-                        <Link href={`/works/websites/${list.desc}`}>
-                          <Image
-                            className="w-full hover:scale-95 hover:opacity-80 hover:shadow-[rgba(0,0,0,0.35)_0px_5px_15px] transition-all imgCursor "
-                            src={list.image}
-                            alt={list.desc}
-                            width={0}
-                            height={0}
-                            sizes="100%"
-                            onContextMenu={(e) => e.preventDefault()}
-                          />
-                        </Link>
-                      ) : (
-                        <Image
-                          className="w-full hover:scale-95 hover:opacity-80 hover:shadow-[rgba(0,0,0,0.35)_0px_5px_15px] transition-all imgCursor "
-                          src={list.image}
-                          alt={list.desc}
-                          width={0}
-                          height={0}
-                          sizes="100%"
-                          onContextMenu={(e) => e.preventDefault()}
-                          onClick={() => handleClick(list, index)}
-                        />
-                      )}
-                    </div>
-                  ))
-                }
-
-                {clickedImg && (
-                  <LightBox 
-                    clickedImg={clickedImg}
-                    setClickedImg={setClickedImg}
-                    handleNext={handleNextImage}
-                    handlePrev={handlePrevImage}
+        <div className='grid grid-cols-1 md:grid-cols-2 mx-auto my-8 mb-20 gap-4'>
+          {
+            projectsToRender.map((list, index) => (
+              <div key={index}>
+                {list.name === "websites" ? (
+                  <Link href={`/works/websites/${list.desc}`}>
+                    <Image
+                      className="w-full hover:scale-95 hover:opacity-80 hover:shadow-[rgba(0,0,0,0.35)_0px_5px_15px] transition-all imgCursor "
+                      src={list.image}
+                      alt={list.desc}
+                      width={0}
+                      height={0}
+                      sizes="100%"
+                      onContextMenu={(e) => e.preventDefault()}
+                    />
+                  </Link>
+                ) : (
+                  <Image
+                    className="w-full hover:scale-95 hover:opacity-80 hover:shadow-[rgba(0,0,0,0.35)_0px_5px_15px] transition-all imgCursor "
+                    src={list.image}
+                    alt={list.desc}
+                    width={0}
+                    height={0}
+                    sizes="100%"
+                    onContextMenu={(e) => e.preventDefault()}
+                    onClick={() => handleClick(list, index)}
                   />
                 )}
               </div>
-          </Wrapper>
-          <Cursor />
-          <PageTransitionLayout text={workName}/>
-      </div>
+            ))
+          }
+
+          {clickedImg && (
+            <LightBox
+              clickedImg={clickedImg}
+              setClickedImg={setClickedImg}
+              handleNext={handleNextImage}
+              handlePrev={handlePrevImage}
+            />
+          )}
+        </div>
+      </Wrapper>
+      <Cursor />
+      <PageTransitionLayout text={workName} />
+    </div>
   );
 }
 

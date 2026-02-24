@@ -62,21 +62,21 @@ const worksList = [
         image: "/assets/works/StreamOverlays/3.jpg",
         desc: 'stream pack',
     },
-    {
+    /* {
         name: 'stream overlays',
         image: "/assets/works/StreamOverlays/4.jpg",
         desc: 'stream pack',
-    },
+    }, */
     {
         name: 'stream overlays',
         image: "/assets/works/StreamOverlays/5.jpg",
         desc: 'stream pack',
     },
-    {
+    /* {
         name: 'stream overlays',
         image: "/assets/works/StreamOverlays/6.jpg",
         desc: 'stream pack',
-    },
+    }, */
     {
         name: 'stream overlays',
         image: "/assets/works/StreamOverlays/7.jpg",
@@ -147,7 +147,7 @@ const worksList = [
         image: "/assets/works/RediseñoWeb/CityManga/CityManga.jpg",
         desc: 'CityManga',
     },
-    {
+    /* {
         name: 'websites',
         image: "/assets/works/RediseñoWeb/LectorManga/LectorManga.jpg",
         desc: 'LectorManga',
@@ -161,7 +161,7 @@ const worksList = [
         name: 'websites',
         image: "/assets/works/RediseñoWeb/ZenGaku/ZenGaku1.jpg",
         desc: 'ZenGaku',
-    },
+    }, */
 
     //Advertisements
     {
@@ -176,10 +176,10 @@ const worksList = [
     },
     {
         name: 'advertisements',
-        image: "/assets/works/advertisements/3.jpg",
-        desc: 'Ars my airs',
+        image: "/assets/works/advertisements/PINK.png",
+        desc: 'Street fighter satho',
     },
-    {
+    /* {
         name: 'advertisements',
         image: "/assets/works/advertisements/2.jpg",
         desc: 'MSI GEFORCE RTX 3060TI 8gb GDDR6',
@@ -188,7 +188,7 @@ const worksList = [
         name: 'advertisements',
         image: "/assets/works/advertisements/1.jpg",
         desc: 'Arctis 7p',
-    },
+    }, */
 
 ]
 

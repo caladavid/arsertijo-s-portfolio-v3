@@ -147,7 +147,7 @@ const worksList = [
         image: "/assets/works/RediseñoWeb/CityManga/CityManga.jpg",
         desc: 'CityManga',
     },
-    /* {
+    {
         name: 'websites',
         image: "/assets/works/RediseñoWeb/LectorManga/LectorManga.jpg",
         desc: 'LectorManga',
@@ -161,7 +161,7 @@ const worksList = [
         name: 'websites',
         image: "/assets/works/RediseñoWeb/ZenGaku/ZenGaku1.jpg",
         desc: 'ZenGaku',
-    }, */
+    },
 
     //Advertisements
     {

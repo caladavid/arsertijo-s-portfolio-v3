@@ -231,6 +231,7 @@ const WebRedesignList = [
         name: 'SpoilerSafe',
         img: "/assets/works/RediseñoWeb/SpoilerSafe/Spoiler-Safe.gif",
         desc: 'SpoilerSafe',
+        type: 'gif'
     },
     {
         name: 'SpoilerSafe',

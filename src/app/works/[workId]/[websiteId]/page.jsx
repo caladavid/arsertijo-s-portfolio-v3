@@ -30,23 +30,24 @@ const Websites = () => {
           {
             projectsToRender.map((list, index) => {
               const isVideo = list.img.endsWith('.mp4');
+              const isGif = list.img.endsWith('.gif');
 
               return (
                 <div key={index} className='flex relative'>
                   {isVideo ? (
                     <video 
                       className='w-full select-none' 
-                      src={list.img} 
-                      autoPlay 
+                      src={list.img}  
                       loop 
-                      muted 
                       playsInline
+                      controls={true}
                     />
                   ) : (
                     <Image 
                       className='w-full select-none pointer-events-none' 
                       src={list.img} 
                       alt={list.desc}
+                      unoptimized={isGif ? true : false}
                       onContextMenu={(e) => e.preventDefault()}
                       width={0}
                       height={0}

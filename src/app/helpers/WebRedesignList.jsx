@@ -215,6 +215,39 @@ const WebRedesignList = [
         img: "/assets/works/RediseñoWeb/ZenGaku/ZenGaku13.jpg",
         desc: 'ZenGaku Redesign',
     },
+    
+    // SpoilerSafe
+    {
+        name: 'SpoilerSafe',
+        img: "/assets/works/RediseñoWeb/SpoilerSafe/presentacion-spoilersafe_01.png",
+        desc: 'SpoilerSafe',
+    },
+    {
+        name: 'SpoilerSafe',
+        img: "/assets/works/RediseñoWeb/SpoilerSafe/presentacion-spoilersafe_02.png",
+        desc: 'SpoilerSafe',
+    },
+    {
+        name: 'SpoilerSafe',
+        img: "/assets/works/RediseñoWeb/SpoilerSafe/Spoiler-Safe.gif",
+        desc: 'SpoilerSafe',
+    },
+    {
+        name: 'SpoilerSafe',
+        img: "/assets/works/RediseñoWeb/SpoilerSafe/presentacion-spoilersafe_04.png",
+        desc: 'SpoilerSafe',
+    },
+    {
+        name: 'SpoilerSafe',
+        img: "/assets/works/RediseñoWeb/SpoilerSafe/SpoilerSafe.mp4",
+        desc: 'SpoilerSafe',
+        type: 'video'
+    },
+    {
+        name: 'SpoilerSafe',
+        img: "/assets/works/RediseñoWeb/SpoilerSafe/final.png",
+        desc: 'SpoilerSafe',
+    },
 
 ]
 

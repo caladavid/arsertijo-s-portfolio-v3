@@ -142,6 +142,11 @@ const worksList = [
         desc: 'Ruki',
     },
         //Web Redesign
+        {
+        name: 'websites',
+        image: "/assets/works/RediseñoWeb/SpoilerSafe/Cover.png",
+        desc: 'SpoilerSafe',
+    },
     {
         name: 'websites',
         image: "/assets/works/RediseñoWeb/CityManga/CityManga.jpg",
@@ -162,6 +167,7 @@ const worksList = [
         image: "/assets/works/RediseñoWeb/ZenGaku/ZenGaku1.jpg",
         desc: 'ZenGaku',
     },
+
 
     //Advertisements
     {

@@ -28,24 +28,34 @@ const Websites = () => {
             <div className='grid grid-cols-1 w-[90%] mx-auto my-8 mb-20'>
               {isLectorManga && <ComparisonSlider />}
           {
-            projectsToRender.map((list, index) => (
-              <div key={ index }>
-                {
-                  <div className='flex relative'>
+            projectsToRender.map((list, index) => {
+              const isVideo = list.img.endsWith('.mp4');
+
+              return (
+                <div key={index} className='flex relative'>
+                  {isVideo ? (
+                    <video 
+                      className='w-full select-none' 
+                      src={list.img} 
+                      autoPlay 
+                      loop 
+                      muted 
+                      playsInline
+                    />
+                  ) : (
                     <Image 
                       className='w-full select-none pointer-events-none' 
                       src={list.img} 
-                      key={index} 
                       alt={list.desc}
                       onContextMenu={(e) => e.preventDefault()}
                       width={0}
                       height={0}
                       sizes="100%"  
                     />
-                  </div>
-                  }
-              </div>
-            ))
+                  )}
+                </div>
+              )
+            })
           } 
           </div>
         </Wrapper>
